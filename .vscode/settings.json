@@ -1,0 +1,7 @@
+{
+  "files.associations": {
+    "iostream": "cpp",
+    "*.ipp": "cpp"
+  },
+  "C_Cpp.default.includePath": ["${default}", "${workspaceFolder}/include"]
+}
