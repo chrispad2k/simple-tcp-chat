@@ -5,18 +5,32 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Build and Run",
+      "name": "Server",
       "type": "cppdbg",
       "request": "launch",
-      "program": "${workspaceFolder}/bin/simpletcp",
-      "args": ["-t", "server"],
+      "program": "${workspaceFolder}/bin/simple-tcp-chat",
+      "args": ["-t", "server", "-p", "3000"],
       "stopAtEntry": false,
       "cwd": "${workspaceFolder}",
       "environment": [],
       "externalConsole": false,
       "internalConsoleOptions": "openOnSessionStart",
       "MIMode": "lldb",
-      "preLaunchTask": "build"
+      "preLaunchTask": "ninja"
+    },
+    {
+      "name": "Client",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/bin/simple-tcp-chat",
+      "args": ["-t", "client", "-h", "127.0.0.1", "-p", "3000"],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "internalConsoleOptions": "openOnSessionStart",
+      "MIMode": "lldb",
+      "preLaunchTask": "ninja"
     }
   ]
 }
